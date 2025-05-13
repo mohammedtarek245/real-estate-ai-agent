@@ -1,0 +1,116 @@
+/* Additional custom styling */
+
+/* RTL support for Arabic text */
+[dir="rtl"] {
+    text-align: right;
+}
+
+/* Ensure the chat container takes up full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Additional chat bubble styling */
+.message-in::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 0;
+    border-color: transparent var(--whatsapp-message-in) transparent transparent;
+}
+
+.message-out::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -8px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 8px 8px 0 0;
+    border-color: var(--whatsapp-message-out) transparent transparent transparent;
+}
+
+/* Make sure Arabic text flows correctly */
+.message-text {
+    direction: rtl;
+}
+
+/* Style for the emoji in the initial greeting */
+.greeting-emoji {
+    margin-right: 5px;
+}
+
+/* Improved chat list scrollbar */
+.chats-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chats-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chats-list::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+/* Animation for new messages */
+@keyframes messageAppear {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message {
+    animation: messageAppear 0.2s ease-out;
+}
+
+/* Improve focus styles */
+#message-input:focus {
+    outline: none;
+}
+
+.dialect-selector select:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 168, 132, 0.3);
+}
+
+/* Display for mobile toggle */
+.mobile-toggle {
+    display: none;
+    font-size: 24px;
+    color: var(--whatsapp-icon);
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .mobile-toggle {
+        display: block;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block additional_head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/whatsapp.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="whatsapp-container">
+    <!-- Left sidebar -->
+    <div class="sidebar">
+        <!-- Header -->
+        <div class="sidebar-header">
+            <div class="user-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="sidebar-header-right">
+                <i class="fas fa-sync-alt"></i>
+                <i class="fas fa-comment-alt"></i>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+        
+        <!-- Search bar -->
+        <div class="search-container">
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search or start new chat">
+            </div>
+        </div>
+        
+        <!-- Chats list -->
+        <div class="chats-list">
+            <div class="chat-item active" data-chatid="client1">
+                <div class="chat-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-title">Client 1</div>
+                    <div class="chat-last-message">أهلا بك!</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-time">10:30 AM</div>
+                </div>
+            </div>
+            <div class="chat-item" data-chatid="client2">
+                <div class="chat-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-title">Client 2</div>
+                    <div class="chat-last-message">مرحبا!</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-time">Yesterday</div>
+                </div>
+            </div>
+            <div class="chat-item" data-chatid="client3">
+                <div class="chat-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-title">Client 3</div>
+                    <div class="chat-last-message">كيف حالك؟</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-time">Yesterday</div>
+                </div>
+            </div>
+            <div class="chat-item" data-chatid="client4">
+                <div class="chat-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-title">Client 4</div>
+                    <div class="chat-last-message">شكرا لك!</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-time">7/14/23</div>
+                </div>
+            </div>
+            <div class="chat-item" data-chatid="client5">
+                <div class="chat-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-title">Client 5</div>
+                    <div class="chat-last-message">تحياتي!</div>
+                </div>
+                <div class="chat-meta">
+                    <div class="chat-time">7/10/23</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chat main area -->
+    <div class="chat-main">
+        <!-- Chat header -->
+        <div class="chat-header">
+            <div class="chat-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-details">
+                    <div class="chat-name">Real Estate Agent</div>
+                    <div class="chat-status">online</div>
+                </div>
+            </div>
+            <div class="chat-actions">
+                <i class="fas fa-search"></i>
+                <div class="dialect-selector">
+                    <select id="dialect-select">
+                        <option value="egyptian">Egyptian</option>
+                        <option value="khaleeji">Khaleeji</option>
+                        <option value="msa">MSA (Fusha)</option>
+                    </select>
+                </div>
+                <i class="fas fa-ellipsis-v"></i>
+            </div>
+        </div>
+        
+        <!-- Chat messages area -->
+        <div class="chat-messages">
+            <!-- Messages will be dynamically added here -->
+            <div class="message-date">Today</div>
+        </div>
+        
+        <!-- Chat input area -->
+        <div class="chat-input-area">
+            <div class="chat-input-container">
+                <i class="far fa-laugh"></i>
+                <div class="chat-input-wrapper">
+                    <input type="text" id="message-input" placeholder="Type a message" dir="auto">
+                </div>
+                <i class="fas fa-paperclip"></i>
+                <i class="fas fa-microphone"></i>
+                <button id="send-button" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block additional_scripts %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

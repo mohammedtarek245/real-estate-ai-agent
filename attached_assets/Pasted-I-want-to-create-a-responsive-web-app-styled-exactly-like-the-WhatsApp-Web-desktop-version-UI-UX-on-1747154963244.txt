@@ -1,0 +1,58 @@
+I want to create a responsive web app styled exactly like the WhatsApp Web desktop version (UI/UX only).
+
+🧠 Project Description:
+- The app is a **real estate AI agent**
+- It holds conversations in **Arabic dialects** (Egyptian, Khaleeji, etc.) as defined in the backend Python logic
+- The UI is in **English**, but all **messages (from the user and the AI)** are in Arabic
+- I will provide the backend Python agent and CSV data
+- The app will run on **Replit**
+
+🎨 UI Requirements:
+
+1. **Layout (WhatsApp style)**:
+   - Left sidebar with fake contacts (e.g. "Client 1", "Client 2"), using generic avatars
+   - Right side: chat window
+   - Chat title/header = **"Real Estate Agent"**
+   - AI messages: left-aligned
+   - User messages: right-aligned
+   - Message bubbles must mimic WhatsApp (green/gray, rounded, etc.)
+
+2. **Greeting Message (very important)**:
+   - When the page first loads, show an initial message from the AI:
+     - Example: "👋 أهلاً! أنا وكيل العقارات الذكي. ازاي ممكن أساعدك؟"
+   - This message should appear before the user types anything
+
+3. **Message Input Functionality**:
+   - User types a message and presses Enter or clicks Send
+     - The message appears immediately
+     - The input field **clears automatically**
+     - The AI response appears with a slight delay (simulate “typing…” if needed)
+
+4. **Performance + Bugs**:
+   - “ . so add databases so the ai agent can use stored older chats or user messages to continue from last topic or question been asked not from the beginninh .Creating a database model to store the agent's state between interactions
+   - Add a “typing...” animation while the AI is thinking
+   - The AI response may be delayed due to backend logic — UI should reflect that
+
+5. **Style**:
+   - Match WhatsApp Web fonts, spacing, layout, and theme colors
+   - Responsive on desktop
+   - Clean, modern look — identical to WhatsApp Web
+   - Avoid using real photos or names
+
+🧪 Technical Notes:
+- Must run easily on Replit (using Streamlit or Flask as backend)
+- Must be easy to integrate with my existing Python backend file (`AI_agent_realestate.py`)
+- You can use HTML/CSS/JS or Streamlit + HTML combos
+- Contacts list can be static (no interactivity required)
+
+
+🎯 Goal:
+Investors should feel like they’re chatting with a **real Arabic-speaking real estate agent** through WhatsApp Web — powered by my AI agent backend.
+
+Please generate clean, working UI code now.
+
+
+
+
+Note : please follow each point clearly and if anything isnt clear feel free to ask me anything 
+
